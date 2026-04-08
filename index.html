@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sleek Notes</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="header-left">
+
+    <!-- MENU BUTTON -->
+    <button class="icon-btn menu-btn" onclick="toggleSidebar()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <line x1="3" y1="12" x2="21" y2="12"/>
+        <line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+
+    <h1>Sleek Notes</h1>
+  </div>
+
+  <div class="header-right">
+    <button class="icon-btn" onclick="showAbout()">ℹ️</button>
+    <button class="icon-btn" id="themeBtn" onclick="toggleTheme()">🌙</button>
+  </div>
+</header>
+
+<div class="layout">
+
+  <!-- SIDEBAR -->
+<aside class="sidebar" id="sidebar">
+  <div class="search-box">
+    <input type="text" placeholder="Search notes..." id="searchInput">
+  </div>
+  <div class="notes-list" id="notesList"></div>
+</aside>
+
+<!-- ✅ MOVE FAB HERE -->
+<button class="fab" onclick="newNote()">＋</button>
+
+  
+  <!-- OVERLAY -->
+  <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+
+  <!-- MAIN -->
+  <main class="editor" id="editorArea"></main>
+
+ 
+
+</div>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="aboutModal" onclick="if(event.target===this)">
+  <div class="modal">
+    <h2>About Sleek Notes</h2>
+    <p>A lightweight, modern note-taking app with dark mode, search, pinning, and local storage.</p>
+    <p>Developed by <span class="dev">Lakshya Soni</span></p>
+    <p style="font-size:.75rem">Version 1.0 • Built with ❤️</p>
+    <button class="close-btn" onclick="hideAbout()">Close</button>
+  </div>
+
+<!-- ✅ SCRIPT FIXED (MOVED HERE) -->
+<script src="script.js"></script>
+
+</body>
+</html>
