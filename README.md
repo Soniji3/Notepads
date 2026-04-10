@@ -57,7 +57,6 @@ Sleek Notes integrates AI to enhance user productivity:
 
 <p align="center">
   <img src="image.png" width="400"/>
-  <img src="assets/screenshot2.png" width="400"/>
 </p>
 
 ---
